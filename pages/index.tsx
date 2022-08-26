@@ -30,10 +30,10 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
             <span className="relative inset-y-4 ml-24 inline-block px-1 before:absolute before:-inset-1 before:block before:-skew-y-6 before:rounded-lg before:bg-primary-600 before:bg-opacity-20 sm:inset-y-7 sm:ml-40">
               <span className="relative inline-block -rotate-6 text-primary-500">
                 <Link
-                  href="https://wpxss.com"
+                  href="https://twitter.com/reubence_"
                   className="font-arrow2 text-sm font-bold text-primary-500 transition hover:underline hover:underline-offset-8 sm:text-xl"
                 >
-                  wp✘SS
+                  by wp✘SS.com
                 </Link>
               </span>
             </span>
@@ -45,7 +45,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
               club
             </h1>
             <p className="text-black dark:text-white sm:pr-6 sm:text-lg sm:leading-8">
-             Welcome to my Digital Garden – I am a <span className="">Data Scientist</span> by
+              Welcome to my Digital Garden – I am a <span className="">Data Scientist</span> by
               training and <span className="">Full-Stack Developer</span> by passion who loves
               building for the web & mobile. Also sometimes for the toaster.{' '}
               {/* In my
@@ -63,13 +63,14 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
                 </a>
               </Link>{' '}
               about my journey as an Entrepreneur. */}
-              Save your time and money with ready-to-use solutions and grow your business faster! <span className="waving-hand text-2xl">⚡️</span>
+              Have a good read! <span className="waving-hand text-2xl">👋🏻</span>
             </p>
             <p className="leading-7 text-gray-500 underline underline-offset-4 sm:pr-6 sm:text-lg">
               <Link
                 href="/about"
-                className="hover:cursor-pointer hover:text-primary-500 dark:text-gray-500 hover:dark:text-primary-500">
-                <a>View Our WordPres &rarr;</a>
+                className="hover:cursor-pointer hover:text-primary-500 dark:text-gray-500 hover:dark:text-primary-500"
+              >
+                <a>Read the rest of my bio &rarr;</a>
               </Link>
             </p>
           </div>
@@ -81,7 +82,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         </div>
 
         <h1 className="my-4 mt-16 pb-2 text-3xl font-bold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
-          Latest Plugins{' '}
+          Recent Posts{' '}
         </h1>
         <ul className="flex flex-col gap-10 dark:border-gray-700 md:flex-row">
           {!posts.length && 'No posts found.'}
@@ -148,7 +149,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
               className="text-background-color hover:text-primary-600 dark:text-white dark:hover:text-primary-400"
               aria-label="all posts"
             >
-              All Plugins &rarr;
+              All Posts &rarr;
             </Link>
           </div>
         )}
