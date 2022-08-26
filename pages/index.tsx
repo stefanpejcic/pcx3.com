@@ -45,7 +45,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
               Rapose
             </h1>
             <p className="text-black dark:text-white sm:pr-6 sm:text-lg sm:leading-8">
-              Hi, my name is Stefan Pejčić. I am forging my decade plus experience within IT doing: Technical Support, Web Hosting, System Administration, and WordPress development.{' '}
+              Hi, my name is Stefan Pejčić. I am forging my decade plus experience within IT doing: Technical Support, Web Hosting, System Administration, and WordPress development.
               {/* In my
               free time, I like developing{' '}
               <Link
@@ -64,7 +64,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
               Have a good read! <span className="waving-hand text-2xl">👋🏻</span>
             </p>
             <p className="text-black dark:text-white sm:pr-6 sm:text-lg sm:leading-8">
-              I offer articles with my insights, tips, tricks, &amp; scripts to assist with Linux System Adminstration.{' '}
+              I offer articles with my insights, tips, tricks, &amp; scripts to assist with Linux System Adminstration.
               {/* In my
               free time, I like developing{' '}
               <Link
