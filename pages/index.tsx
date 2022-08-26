@@ -46,8 +46,8 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
             </h1>
             <p className="text-black dark:text-white sm:pr-6 sm:text-lg sm:leading-8">
               <span class="waving-hand text-2xl">👋🏻</span>
-              Hi, my name is Stefan Pejčić. I am forging my decade plus experience within IT doing: Technical Support, Web Hosting, System Administration, and WordPress development.<br><br>
-              I offer articles with my insights, tips, tricks, &amp; scripts to assist with Linux System Adminstration.<br>{' '}
+              Hi, my name is Stefan Pejcic. I am forging my decade plus experience within IT doing: Technical Support, Web Hosting, System Administration, and WordPress development. 
+              I offer articles with my insights, tips, tricks, &amp; scripts to assist with Linux System Adminstration.</br>{' '}
             </p>
             <p className="leading-7 text-gray-500 underline underline-offset-4 sm:pr-6 sm:text-lg">
               <Link
