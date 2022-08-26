@@ -33,18 +33,22 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
                   href="https://twitter.com/reubence_"
                   className="font-arrow2 text-sm font-bold text-primary-500 transition hover:underline hover:underline-offset-8 sm:text-xl"
                 >
-                  PC✗3.com
+                  @reubence
                 </Link>
               </span>
             </span>
             <h1 className="pt-2 text-4xl font-bold leading-9 tracking-tight text-background-color dark:text-gray-100 sm:text-5xl sm:leading-10 md:text-6xl md:leading-snug">
-              Linux
+              Reuben
               <span className="relative inset-y-8 ml-2 inline-block -rotate-12 font-arrow text-primary-500 sm:inset-y-14">
                 ^
               </span>
-              Administration
+              Rapose
             </h1>
-            <p className="text-black dark:text-white sm:pr-6 sm:text-lg sm:leading-8"> Hi, my name is Stefan Pejčić. I am forging my decade plus experience within IT doing: Technical Support, Web Hosting, System Administration, and WordPress development. I offer articles with my insights, tips, tricks, &amp; scripts to assist with Linux System Adminstration.
+            <p className="text-black dark:text-white sm:pr-6 sm:text-lg sm:leading-8">
+              Welcome to my Digital Garden – I am a <span className="">Data Scientist</span> by
+              training and <span className="">Full-Stack Developer</span> by passion who loves
+              building for the web & mobile. Also sometimes for the toaster.{' '}
+              Have a good read! <span className="waving-hand text-2xl">👋🏻</span>
             </p>
             <p className="leading-7 text-gray-500 underline underline-offset-4 sm:pr-6 sm:text-lg">
               <Link
