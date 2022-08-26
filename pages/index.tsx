@@ -6,7 +6,7 @@ import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { PostFrontMatter } from 'types/PostFrontMatter'
 import NewsletterForm from '@/components/NewsletterForm'
 
-const MAX_DISPLAY = 6
+const MAX_DISPLAY = 3
 
 export const getStaticProps: GetStaticProps<{ posts: PostFrontMatter[] }> = async () => {
   const posts = await getAllFilesFrontMatter('blog')
@@ -45,10 +45,9 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
               Rapose
             </h1>
             <p className="text-black dark:text-white sm:pr-6 sm:text-lg sm:leading-8">
-              Welcome to my Digital Garden – I am a <span className="">Data Scientist</span> by
-              training and <span className="">Full-Stack Developer</span> by passion who loves
-              building for the web & mobile. Also sometimes for the toaster.{' '}
-              <span className="waving-hand text-2xl">👋🏻</span>
+              <span class="waving-hand text-2xl">👋🏻</span>
+              Hi, my name is Stefan Pejčić. I am forging my decade plus experience within IT doing: Technical Support, Web Hosting, System Administration, and WordPress development.<br><br>
+              I offer articles with my insights, tips, tricks, &amp; scripts to assist with Linux System Adminstration.<br>{' '}
             </p>
             <p className="leading-7 text-gray-500 underline underline-offset-4 sm:pr-6 sm:text-lg">
               <Link
