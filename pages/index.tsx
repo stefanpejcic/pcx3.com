@@ -45,7 +45,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
               club
             </h1>
             <p className="text-black dark:text-white sm:pr-6 sm:text-lg sm:leading-8">
-              Our range of functionality enabling FREE WordPress plugins provide you with loads of additional features when setting up your website.{' '}
+              Our range of functionality enabling FREE WordPress plugins.{' '}
               {/* In my
               free time, I like developing{' '}
               <Link
@@ -61,7 +61,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
                 </a>
               </Link>{' '}
               about my journey as an Entrepreneur. */}
-              Save your time and money with ready-to-use solutions and grow your business faster! <span className="waving-hand text-2xl">⚡</span>
+              Save your time! <span className="waving-hand text-2xl">⚡</span>
             </p>
             <p className="leading-7 text-gray-500 underline underline-offset-4 sm:pr-6 sm:text-lg">
               <Link
