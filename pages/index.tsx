@@ -49,10 +49,10 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
             </p>
             <p className="leading-7 text-gray-500 underline underline-offset-4 sm:pr-6 sm:text-lg">
               <Link
-                href="/about"
+                href="https://cpanelplugins.com/"
                 className="hover:cursor-pointer hover:text-primary-500 dark:text-gray-500 hover:dark:text-primary-500"
               >
-                <a>Read the rest of my bio &rarr;</a>
+                <a>cPanel Plugins &rarr;</a>
               </Link>
             </p>
           </div>
