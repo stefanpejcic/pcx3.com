@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react'
 import siteMetadata from '@/data/siteMetadata'
 
 const NewsletterForm = ({
-  title = 'Stay updated, receive the latest post straight to your mailbox',
+  title = 'Stay updated, receive new free plugins straight to your mailbox',
 }) => {
   const inputEl = useRef<HTMLInputElement>(null)
   const [error, setError] = useState(false)
