@@ -47,8 +47,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
             <p className="text-black dark:text-white sm:pr-6 sm:text-lg sm:leading-8">
               Welcome to my Digital Garden – I am a <span className="">Data Scientist</span> by
               training and <span className="">Full-Stack Developer</span> by passion who loves
-              building for the web & mobile. Also sometimes for the toaster.
-              <span className="waving-hand text-2xl">👋🏻</span>
+              building for the web & mobile. Also sometimes for the toaster. <span className="waving-hand text-2xl">👋🏻</span>
             </p>
             <p className="leading-7 text-gray-500 underline underline-offset-4 sm:pr-6 sm:text-lg">
               <Link
