@@ -45,9 +45,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
               club
             </h1>
             <p className="text-black dark:text-white sm:pr-6 sm:text-lg sm:leading-8">
-              Welcome to my Digital Garden – I am a <span className="">Data Scientist</span> by
-              training and <span className="">Full-Stack Developer</span> by passion who loves
-              building for the web & mobile. Also sometimes for the toaster.{' '}
+              Our WordPress plugins help 30,000+ website owners to increase sales, engage visitors, collect leads, and more.{' '}
               {/* In my
               free time, I like developing{' '}
               <Link
@@ -63,7 +61,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
                 </a>
               </Link>{' '}
               about my journey as an Entrepreneur. */}
-              Have a good read! <span className="waving-hand text-2xl">👋🏻</span>
+              Save your time and money with ready-to-use solutions and grow your business faster! <span className="waving-hand text-2xl">⚡️</span>
             </p>
             <p className="leading-7 text-gray-500 underline underline-offset-4 sm:pr-6 sm:text-lg">
               <Link
