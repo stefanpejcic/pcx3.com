@@ -48,7 +48,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
               Welcome to my Digital Garden – I am a <span className="">Data Scientist</span> by
               training and <span className="">Full-Stack Developer</span> by passion who loves
               building for the web & mobile. Also sometimes for the toaster.{' '}
-              {/* In my
+              { In my
               free time, I like developing{' '}
               <Link
                 href="/projects"
@@ -62,7 +62,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
                   blogging
                 </a>
               </Link>{' '}
-              about my journey as an Entrepreneur. */}
+              about my journey as an Entrepreneur. }
               Have a good read! <span className="waving-hand text-2xl">👋🏻</span>
             </p>
             <p className="leading-7 text-gray-500 underline underline-offset-4 sm:pr-6 sm:text-lg">
