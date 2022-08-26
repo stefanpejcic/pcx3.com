@@ -1,0 +1,439 @@
+---
+title: "ColdFusion Cheat Sheet"
+date: "2020-07-12"
+---
+
+This is a quick and dirty cheatsheet for Adobe [ColdFusion 10+](https://pcx3.com/category/vmware/), many snippets can be used on the older version.
+
+![ColdFusion CheatSheet](images/coldfusion-migration.png)
+
+* * *
+
+### Set Variables
+
+Use _cfset_ to create a variable (if it doesn't exist) and assign it a value. You can also use it to call functions.
+
+Current time
+
+```
+<cfset currentTime = now() />
+ 
+```
+
+Regular string
+
+```
+<cfset name = "Archi" /> 
+```
+
+Integer
+
+```
+<cfset age = 29 /> 
+```
+
+Concatenate variable and string
+
+```
+<cfset todayDate = "Today is: #now()#" />
+<cfset greeting = "Hello " & name /> 
+```
+
+Array
+
+```
+<cfset dataArray = [dateFormat(now(), "short"), dateFormat(dateadd('d',1,now()), "short"), "Me", 42] />
+ 
+```
+
+Data structure
+
+```
+<cfset dictionary = { today = dateFormat(now(), "short"), tomorrow = dateFormat(dateadd('d', 1, now()), "short"), who = "Me", the_answer_to_life_and_everything_else = 42 } />
+ 
+```
+
+* * *
+
+### Print out
+
+Hard coded string
+
+```
+<cfdump var = "This is a message for you" />
+<cfoutput>This is a message for you</cfoutput> 
+```
+
+Variable
+
+```
+<cfdump var = "#name#" /> _same as inspect in ruby_
+<cfoutput>#name#</cfoutput> _same as puts in ruby_ 
+```
+
+* * *
+
+### Arrays
+
+Arrays don't start from 0 like in every other language instead they start from 1
+
+Create array literal
+
+```
+<cfset someThings = ["Boca", "Futbol", 42] /> 
+```
+
+Constructor
+
+```
+<cfset sameArray = arrayNew(1) /> 
+```
+
+Adding elements in an specific index
+
+```
+<cfset someThings[4] = "Ruby on Rails" /> 
+```
+
+Appending
+
+```
+<cfset ArrayAppend(someThings, "Destiny") /> 
+```
+
+Looping over the array
+
+```
+<cfloop array = "#someThings#" index = "thing">
+    <cfoutput>#thing#</cfoutput>
+</cfloop> 
+```
+
+* * *
+
+### Loops
+
+There are several different types of for and while loops in ColdFusion.  
+For more info please see the docs for [cfloop](https://cfdocs.org/cfscript).
+
+FOR loop
+
+```
+for (i=1;i LTE ArrayLen(array);i=i+1) {
+	WriteOutput(array[i]);
+} 
+```
+
+While Loop
+
+```
+x = 0;
+while (x LT 5) {
+	x = x + 1;
+	WriteOutput(x);
+}
+//OUTPUTS 12345 
+```
+
+Do While Loop
+
+```
+x = 0;
+do {
+ x = x+1;
+ WriteOutput(x);
+} while (x LTE 0);
+// OUTPUTS 1 
+```
+
+FOR IN Loop (Structure)
+
+```
+struct = StructNew();
+struct.one = "1";
+struct.two = "2";
+for (key in struct) {
+	WriteOutput(key);
+}
+//OUTPUTS onetwo 
+```
+
+FOR IN Loop (Array)
+
+```
+cars = ["Ford","Dodge"];
+for (car in cars) {
+	WriteOutput(car);
+}
+//OUTPUTS FordDodge 
+```
+
+FOR IN Loop (Query)
+
+```
+cars = QueryNew("make,model",
+	"cf_sql_varchar,cf_sql_varchar",
+	[["Ford", "T"],["Dodge","30"]]);
+for (car in cars) {
+	WriteOutput("Model " & car.model);
+}
+//OUTPUTS Model TModel 30 
+```
+
+* * *
+
+### Structures
+
+This are like dictionaries in Python or hashes in Ruby
+
+Create structure literal
+
+```
+<cfset aGuy = {} />
+<cfset batman = {
+    "first_name" = "Bruno",
+    "last_name" = "Diaz",
+    "age" = 42
+} /> 
+```
+
+Constructor
+
+```
+<cfset aGuy = structNew() /> 
+```
+
+Adding elements with brackets
+
+```
+<cfset aGuy["first_name"] = "Stefan" />
+<cfset aGuy["last_name"] = "Pejcic" /> 
+```
+
+Adding elements with dot notation
+
+```
+<cfset aGuy.age = 29 />
+<cfset aGuy.height = "5' 11"" /> 
+```
+
+Looping over the structure
+
+```
+<cfloop collection = "aGuy" item = "data">
+    <cfoutput>#aGuy[data]#: #data#</cfoutput>
+</cfloop> 
+```
+
+* * *
+
+### Queries
+
+Use SQL in coldfusion to retrieve data from a database or enter data in it
+
+Query
+
+```
+var queryOptions = { datasource: "appMain" };
+var data = queryExecute(
+  "SELECT * FROM users", {}, queryOptions
+); 
+```
+
+Allocate query result into variable & retrieve info
+
+```
+<cfquery name="firstQ" datasource="tsdata.ts24">
+    SELECT * FROM TestTable
+</cfquery> 
+```
+
+Looping over the Query
+
+```
+<cfoutput>
+    <cfloop query="#firstQ#">
+        <p><i>myDataAlfa: </i>#firstQ.myDataAlfa# <i>myDataInt: </i>#firstQ.myDataInt#</p>
+    </cfloop>
+    <!--- Extra data to get from the query --->
+    <p>#firstQ.columnlist#</p>
+    <p>#firstQ.recordcount#</p>
+</cfoutput> 
+```
+
+* * *
+
+### Logging
+
+Logging stuff
+
+Clear Log
+
+```
+var logDir = expandPath( "/logs/" );
+var logs = directoryList(
+  path = logDir,
+  listInfo = "name",
+  filter = "*.log",
+  type = "file",
+  recurse = "false"
+);
+for( var log in logs ){
+  var fullPath = logDir & log ;
+  if( fileExists( fullPath ) ){
+    fileDelete( fullPath );
+  }
+} 
+```
+
+LogBox
+
+```
+component {
+  // ...
+  function onError( exception ){
+   // uLogging error with logbox...
+    writeOutput( "Writing the error in log file.." );
+    logger.error(
+        "An error occured: #exception.message# #exception.detail#"
+        exception
+    );
+    // error page
+    include "views/error.cfm";
+  }
+} 
+```
+
+### Security
+
+Security-related settings for Application.cfc file
+
+Lock down APP
+
+```
+// Application.cfc
+component {
+  this.name = "myApp";
+  this.blockedExtForFileUpload = "*";
+  this.scriptProtect					 = "all";
+  this.sessioncookie = {
+    httpOnly: true,
+    secure  : true
+  };
+} 
+```
+
+* * *
+
+### Error Handling
+
+ColdFusion provides a variety of tools to customize error information and handle errors when they occur.
+
+Try / Catch / Throw / Finally / Rethrow
+
+```
+try {
+	throw(message="Oops", detail="xyz");
+} catch (any e) {
+	WriteOutput("Error: " & e.message);
+	rethrow;
+} finally {
+	WriteOutput("I run even if no error");
+} 
+```
+
+OnError Exception
+
+```
+public function onError(required exception, required string eventName)
+  {
+    var factory = new App.ExceptionFactory();
+    var e = factory.getNewException(arguments.eventName, arguments.exception);
+    if (e.logError()) {
+      var loggingFile = new App.SomeLoggingCfc(arguments.eventName, arguments.exception);
+      loggingFile.commitLog();
+    }
+    if (e.debugError()) {}
+    e.throwException();
+  }  
+```
+
+Output CF Error details without CFDump
+
+```
+<cftry>
+   ...
+<cfcatch>
+   <cf_OutputCFCatch CFCatch="#CFCatch#" />
+</cfcatch>
+</cftry> 
+```
+
+* * *
+
+### Debugging
+
+You can use CFML tags and functions to display or hide debugging and tracing information.
+
+Control Debugging Output
+
+```
+<cfsetting showDebugOutput="No"> 
+```
+
+Show Query execution time
+
+```
+<cfquery name="TestQuery" datasource="cfexample" debug>
+SELECT * FROM TestTable
+</cfquery> 
+```
+
+Log Values to MyAppSilentTrace.log
+
+```
+<cfif IsDebugMode()>
+<cflog file="MyAppSilentTrace" text="Page: #cgi.script_name#,
+completed query MyDBQuery; Query Execution time:
+#cfquery.ExecutionTime# Status: #Application.status#">
+</cfif> 
+```
+
+* * *
+
+### Comments
+
+ColdFusion comments have a similar format to HTML comments but use three dash characters instead of two.
+
+Single line comment
+
+```
+<!--- This is a ColdFusion Comment. Browsers do not receive it. ---> 
+```
+
+Single line comment
+
+```
+mojo = 1; //THIS IS A COMMENT 
+```
+
+Multiline comment
+
+```
+/* This is a comment
+	that can span
+	multiple lines
+*/ 
+```
+
+* * *
+
+We need your help!
+
+#### Do you know a command that we haven't included in this ColdFusion CheatSheet?
+
+Help us keep the Adobe ColdFusion CheatSheet up-to-date and enrich it by sharing the CF snippets that you know with other programmers.
+
+[  
+Share your knowledge  
+](mailto:info@pcx3.com)
