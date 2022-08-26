@@ -10,8 +10,8 @@ export default function Footer() {
           <div className="mb-3 flex space-x-4">
             <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />
             <SocialIcon kind="github" href={siteMetadata.github} size={6} />
-            {/* <SocialIcon kind="facebook" href={siteMetadata.facebook} size={6} /> */}
-            {/* <SocialIcon kind="youtube" href={siteMetadata.youtube} size={6} /> */}
+            <SocialIcon kind="facebook" href={siteMetadata.facebook} size={6} />
+            <SocialIcon kind="youtube" href={siteMetadata.youtube} size={6} />
             <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={6} />
             <SocialIcon kind="twitter" href={siteMetadata.twitter} size={6} />
           </div>
@@ -29,10 +29,10 @@ export default function Footer() {
             </Link>
             <div>{` • `}</div>
             <Link
-              href="https://github.com/reubence/reubence.com"
+              href="https://wordpress.org"
               className="hover:text-primary-500 hover:underline hover:underline-offset-4"
             >
-              Clone Theme
+              Made with ❤️ and WordPress
             </Link>
           </div>
         </div>
