@@ -30,10 +30,10 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
             <span className="relative inset-y-4 ml-24 inline-block px-1 before:absolute before:-inset-1 before:block before:-skew-y-6 before:rounded-lg before:bg-primary-600 before:bg-opacity-20 sm:inset-y-7 sm:ml-40">
               <span className="relative inline-block -rotate-6 text-primary-500">
                 <Link
-                  href="https://twitter.com/reubence_"
+                  href="https://wpxss.com"
                   className="font-arrow2 text-sm font-bold text-primary-500 transition hover:underline hover:underline-offset-8 sm:text-xl"
                 >
-                  @reubence
+                  wp✘SS
                 </Link>
               </span>
             </span>
