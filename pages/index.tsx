@@ -46,9 +46,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
             </h1>
             <p className="text-black dark:text-white sm:pr-6 sm:text-lg sm:leading-8">
               Have a good read! <span className="waving-hand text-2xl">👋🏻</span>
-              Welcome to my Digital Garden – I am a <span className="">Data Scientist</span> by
-              training and <span className="">Full-Stack Developer</span> by passion who loves
-              building for the web & mobile. Also sometimes for the toaster.{' '}
+              Hi, my name is Stefan Pejčić. I am forging my decade plus experience within IT doing: Technical Support, Web Hosting, System Administration, and WordPress development.{' '}
               {/* In my
               free time, I like developing{' '}
               <Link
@@ -65,6 +63,9 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
               </Link>{' '}
               about my journey as an Entrepreneur. */}
               Have a good read! <span className="waving-hand text-2xl">👋🏻</span>
+            </p>
+            <p className="text-black dark:text-white sm:pr-6 sm:text-lg sm:leading-8">
+              I offer articles with my insights, tips, tricks, &amp; scripts to assist with Linux System Adminstration.
             </p>
             <p className="leading-7 text-gray-500 underline underline-offset-4 sm:pr-6 sm:text-lg">
               <Link
