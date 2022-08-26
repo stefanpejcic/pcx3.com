@@ -61,7 +61,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
                   blogging
                 </a>
               </Link>
-              about my journey as an Entrepreneur. }
+              about my journey as an Entrepreneur. 
               Have a good read! <span className="waving-hand text-2xl">👋🏻</span>
             </p>
             <p className="leading-7 text-gray-500 underline underline-offset-4 sm:pr-6 sm:text-lg">
