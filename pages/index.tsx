@@ -62,9 +62,6 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
                 </a>
               </Link>{' '}
               about my journey as an Entrepreneur. */}
-              Have a good read! <span className="waving-hand text-2xl">👋🏻</span>
-            </p>
-            <p className="text-black dark:text-white sm:pr-6 sm:text-lg sm:leading-8">
               I offer articles with my insights, tips, tricks, &amp; scripts to assist with Linux System Adminstration.
             </p>
             <p className="leading-7 text-gray-500 underline underline-offset-4 sm:pr-6 sm:text-lg">
