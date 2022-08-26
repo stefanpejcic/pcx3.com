@@ -45,7 +45,9 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
               club
             </h1>
             <p className="text-black dark:text-white sm:pr-6 sm:text-lg sm:leading-8">
-              Free WordPress plugins that will make website editing and maintenance easier{'·'} <span className="waving-hand text-2xl">⚡</span>
+              Welcome to my Digital Garden – I am a <span className="">Data Scientist</span> by
+              training and <span className="">Full-Stack Developer</span> by passion who loves
+              building for the web & mobile. Also sometimes for the toaster.{' '} <span className="waving-hand text-2xl">⚡</span>
             </p>
             <p className="leading-7 text-gray-500 underline underline-offset-4 sm:pr-6 sm:text-lg">
               <Link
