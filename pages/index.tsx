@@ -45,23 +45,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
               club
             </h1>
             <p className="text-black dark:text-white sm:pr-6 sm:text-lg sm:leading-8">
-              Our range of functionality enabling FREE WordPress plugins.{' '}
-              {/* In my
-              free time, I like developing{' '}
-              <Link
-                href="/projects"
-                className="text-black underline decoration-primary-500 underline-offset-4 hover:cursor-pointer hover:text-primary-500 dark:text-white hover:dark:text-primary-500"
-              >
-                <a>side projects</a>
-              </Link>{' '}
-              and{' '}
-              <Link href="/blog">
-                <a className="text-black underline decoration-primary-500 underline-offset-4 hover:cursor-pointer hover:text-primary-500 dark:text-white hover:dark:text-primary-500">
-                  blogging
-                </a>
-              </Link>{' '}
-              about my journey as an Entrepreneur. */}
-              Save your time and money with ready to use solutions and grow your business faster. <span className="waving-hand text-2xl">⚡</span>
+              ajde vise <span className="waving-hand text-2xl">⚡</span>
             </p>
             <p className="leading-7 text-gray-500 underline underline-offset-4 sm:pr-6 sm:text-lg">
               <Link
