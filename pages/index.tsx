@@ -45,7 +45,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
               club
             </h1>
             <p className="text-black dark:text-white sm:pr-6 sm:text-lg sm:leading-8">
-              Free WordPress plugins!{' '}
+              Our range of functionality enabling FREE WordPress plugins provide you with loads of additional features when setting up your website.{' '}
               {/* In my
               free time, I like developing{' '}
               <Link
