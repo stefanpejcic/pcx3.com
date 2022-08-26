@@ -1,0 +1,52 @@
+---
+title: "3 Ways to Reboot AWS Instance EC2"date: '2022-02-15'
+date: "2022-08-03"
+tags: ['aws']
+draft: false
+summary: Here are 3 different ways to restart EC2 AWS Instance.
+images: ['/static/images/reboot-aws-instance.png']
+layout: PostLayout
+readTime: '1 minute read'
+---
+
+Here are 3 different ways to restart EC2 AWS Instance:
+
+## 1\. Reboot EC2 Instance using AWS Console
+
+1. Login into your AWS EC2 Console
+2. Navigate to "Instances" and Select instance which you want to restart, right-click on it and then select "Reboot"
+3. Click "Yes, Reboot" and confirm
+
+![](images/reboot-aws-instance-1024x484.png)
+
+* * *
+
+## 2\. Reboot EC2 Instance using CLI
+
+NOTE: No success message will be shown
+
+```
+aws ec2 reboot-instances --instance-ids i-1234567890abcdef5
+```
+
+* * *
+
+## 3\. Reboot EC2 Instance using Powershell
+
+For Powershell you will need to create AWS key:
+
+1. Go to your account, select Security Credentials and create an AWS access key and secret key.
+2. Open Power-Shell for AWS, then add your AWS Access Key and Secret Key.
+3. Get your instance ID by using this URL from EC2 instance
+
+```
+http://179.255.178.262/latest/meta-data/instance-id
+
+//REPLACE THE IP WITH YOUR INSTANCE
+```
+
+4\. Restart the instance with command:
+
+```
+Restart-EC2Instance -InstanceId i-12345678?
+```
