@@ -9,7 +9,7 @@ const projectsData = [
   {
     title: 'Fin-Tech',
     description:
-      'An enterprise resource planning software to manage daily processes including Accounting, Invoice Generation & Tax Filing. It was built to be fully responsive using Next.js & Supabase and aims to automate various processes and enhance productivity of employeess.',
+      'An entedddrprise resource planning software to manage daily processes including Accounting, Invoice Generation & Tax Filing. It was built to be fully responsive using Next.js & Supabase and aims to automate various processes and enhance productivity of employeess.',
     imgSrc: '/static/images/projects/FinTech.png',
     href: 'https://github.com/reubence/ERP',
   },
