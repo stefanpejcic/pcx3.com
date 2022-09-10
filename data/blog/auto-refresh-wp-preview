@@ -1,0 +1,22 @@
+---
+title: " Auto Refresh WP Preview"
+date: '2022-08-03'
+tags: ['aws']
+draft: false
+summary: HYou can view edits in real-time thanks to this plugin's automatic refreshment of the live preview page!
+images: [/static/images/reboot-aws-instance.png']
+layout: PostLayout
+readTime: 'free plugin'
+---
+
+Clicking the "Preview" button when updating a post in Gutenber, WPBakery, or any other page builder will open a new page where you can view the changes. However, you have to repeat the process the next time you wish to preview the modifications.
+This plugin fixes the problem by automatically updating the preview page so that you only need to open it once and it will refresh automatically every time an edit is made.
+
+
+### HOW TO USE THE PLUGIN
+
+    Click on the “Preview” button
+    Edit the page and view changes on the new page
+
+![screenshot](https://plugins.club/wp-content/uploads/2022/08/chrome_sfb7lQyhmH.png)
+
