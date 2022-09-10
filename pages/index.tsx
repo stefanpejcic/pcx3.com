@@ -64,7 +64,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         </div>
 
         <h1 className="my-4 mt-16 pb-2 text-3xl font-bold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
-          Latest Plugins{' '}
+          From the Blog{' '}
         </h1>
         <ul className="flex flex-col gap-10 dark:border-gray-700 md:flex-row">
           {!posts.length && 'No posts found.'}
@@ -131,7 +131,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
               className="text-background-color hover:text-primary-600 dark:text-white dark:hover:text-primary-400"
               aria-label="all posts"
             >
-              All Plugins &rarr;
+              All articles &rarr;
             </Link>
           </div>
         )}
