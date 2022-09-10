@@ -38,21 +38,21 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
               </span>
             </span>
             <h1 className="pt-2 text-4xl font-bold leading-9 tracking-tight text-background-color dark:text-gray-100 sm:text-5xl sm:leading-10 md:text-6xl md:leading-snug">
-              plugins
+              WordPress
               <span className="relative inset-y-8 ml-2 inline-block -rotate-12 font-arrow text-primary-500 sm:inset-y-14">
                 ^
               </span>
-              club
+              Services
             </h1>
             <p className="text-black dark:text-white sm:pr-6 sm:text-lg sm:leading-8">
-              Free WordPress plugins <span className="waving-hand text-2xl">⚡</span>
+              WordPress Development & Maintenance <span className="waving-hand text-2xl">⚡</span>
             </p>
             <p className="leading-7 text-gray-500 underline underline-offset-4 sm:pr-6 sm:text-lg">
               <Link
                 href="https://cpanelplugins.com/"
                 className="hover:cursor-pointer hover:text-primary-500 dark:text-gray-500 hover:dark:text-primary-500"
               >
-                <a>cPanel Plugins &rarr;</a>
+                <a>Our Services &rarr;</a>
               </Link>
             </p>
           </div>
