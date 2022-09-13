@@ -45,7 +45,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
               Security
             </h1>
             <p className="text-black dark:text-white sm:pr-6 sm:text-lg sm:leading-8">
-              In depth WordPress security and investigation<span className="waving-hand text-2xl">⚡</span>
+              In depth WP security and investigation<span className="waving-hand text-2xl">⚡</span>
             </p>
             <p className="leading-7 text-gray-500 underline underline-offset-4 sm:pr-6 sm:text-lg">
               <Link
