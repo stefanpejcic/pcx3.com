@@ -52,7 +52,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
                 href="/pentest"
                 className="hover:cursor-pointer hover:text-primary-500 dark:text-gray-500 hover:dark:text-primary-500"
               >
-                <a>Need to assess your cyber security risk? Learn More &rarr;</a>
+                <a>Need to assess your cyber security risk? &rarr;</a>
               </Link>
             </p>
           </div>
@@ -64,10 +64,10 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         </div>
 
         <h1 className="my-4 mt-16 pb-2 text-3xl font-bold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
-          From the Blog{' '}
+          Latest{' '}
         </h1>
         <ul className="flex flex-col gap-10 dark:border-gray-700 md:flex-row">
-          {!posts.length && 'No posts found.'}
+          {!posts.length && 'sry bro, no posts.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter, index) => {
             const { slug, date, title, summary, tags, readTime } = frontMatter
             return (
