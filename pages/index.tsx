@@ -38,7 +38,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
               </span>
             </span>
             <h1 className="pt-2 text-4xl font-bold leading-9 tracking-tight text-background-color dark:text-gray-100 sm:text-5xl sm:leading-10 md:text-6xl md:leading-snug">
-              On
+              Website
               <span className="relative inset-y-8 ml-2 inline-block -rotate-12 font-arrow text-primary-500 sm:inset-y-14">
                 ^
               </span>
